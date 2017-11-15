@@ -18,16 +18,26 @@ public class MyPanelClass extends JPanel {
                         int y1 = myInsets.top;
                         int x2 = getWidth() - myInsets.right - 1;
                         int y2 = getHeight() - myInsets.bottom - 1;
+                        
                         int width = x2 - x1;
                         int height = y2 - y1;
+                        
+                        int OVALSIZE = 55;
  
                         //Paint the background
                         g.setColor(Color.DARK_GRAY);
                         g.fillRect(x1, y1, width + 1, height + 1);
                         //Draw a border
-                        g.setColor(Color.YELLOW);
-                        g.drawRect(x1, y1, width , height);
-                        g.setColor(Color.RED);
-                        g.drawRect(x1 + 10 , y1 + 10 , width - 20, height - 20);
+//                        g.setColor(Color.YELLOW);
+//                        g.drawRect(x1, y1, width , height);
+//                        g.setColor(Color.RED);
+//                        g.drawRect(x1 + 10 , y1 + 10 , width - 20, height - 20);
+//                        g.setColor(Color.WHITE);
+//                        g.drawLine(x1, y1, x2, y2);
+//                        g.setColor(Color.BLUE);
+//                        g.drawLine(x2, y1, x1, y2);
+                        g.setColor(Color.PINK);
+                        g.fillOval(width - OVALSIZE / 2 - width / 2, height - OVALSIZE /2 - height / 2, 55, 55);
+                        
             }
 }
