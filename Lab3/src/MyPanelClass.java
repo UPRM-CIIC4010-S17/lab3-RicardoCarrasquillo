@@ -50,18 +50,40 @@ public class MyPanelClass extends JPanel {
 //                        p.addPoint(x1 + 15, y1 + 25);
 //                        g.setColor(Color.YELLOW);
 //                        g.fillPolygon(p);
-                        Polygon p2 = new Polygon();
-                        p2.addPoint(x1 + 25, y1 + 73);
-                        p2.addPoint(x1 + 41, y1 + 73);
-                        p2.addPoint(x1 + 47, y1 + 58);
-                        p2.addPoint(x1 + 53, y1 + 73);
-                        p2.addPoint(x1 + 69, y1 + 73);
-                        p2.addPoint(x1 + 56, y1 + 83);
-                        p2.addPoint(x1 + 61, y1 + 98);
-                        p2.addPoint(x1 + 47, y1 + 88);
-                        p2.addPoint(x1 + 34, y1 + 98);
-                        p2.addPoint(x1 + 38, y1 + 83);
+                        
+                        final int DEFAULT_RECTANGLE_HEIGHT = height/5;
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1, width + 1 , DEFAULT_RECTANGLE_HEIGHT);
                         g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+                        g.fillRect(x1 , DEFAULT_RECTANGLE_HEIGHT , width + 1, DEFAULT_RECTANGLE_HEIGHT);
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, DEFAULT_RECTANGLE_HEIGHT * 2 , width + 1, DEFAULT_RECTANGLE_HEIGHT);
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1 , DEFAULT_RECTANGLE_HEIGHT * 3 , width + 1, DEFAULT_RECTANGLE_HEIGHT);
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, DEFAULT_RECTANGLE_HEIGHT * 4 , width + 1, DEFAULT_RECTANGLE_HEIGHT + 1);
+                        g.setColor(Color.BLUE);
+                        Polygon p1 = new Polygon();
+                        p1.addPoint(x1, y1);
+                        p1.addPoint(width / 2, height / 2);
+                        p1.addPoint(x1, y2);
+                        g.fillPolygon(p1);
+                        g.setColor(Color.WHITE);
+                        Polygon p2 = new Polygon();
+                        final int DEFAULT_P2_POLYGON_HEIGHT = height/2;
+                        p2.addPoint(x1 + 25, DEFAULT_P2_POLYGON_HEIGHT + 73);
+                        p2.addPoint(x1 + 41, DEFAULT_P2_POLYGON_HEIGHT + 73);
+                        p2.addPoint(x1 + 47, DEFAULT_P2_POLYGON_HEIGHT + 58);
+                        p2.addPoint(x1 + 53, DEFAULT_P2_POLYGON_HEIGHT + 73);
+                        p2.addPoint(x1 + 69, DEFAULT_P2_POLYGON_HEIGHT + 73);
+                        p2.addPoint(x1 + 56, DEFAULT_P2_POLYGON_HEIGHT + 83);
+                        p2.addPoint(x1 + 61, DEFAULT_P2_POLYGON_HEIGHT + 98);
+                        p2.addPoint(x1 + 47, DEFAULT_P2_POLYGON_HEIGHT + 88);
+                        p2.addPoint(x1 + 34, DEFAULT_P2_POLYGON_HEIGHT + 98);
+                        p2.addPoint(x1 + 38, DEFAULT_P2_POLYGON_HEIGHT + 83);
+                        g.fillPolygon(p2);
+                        
+                        
+                        
             }
 }
